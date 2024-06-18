@@ -2,7 +2,7 @@ name: Daily Get Holidays
 
 on:
   schedule:
-    - cron: '30 17 * * *'
+    - cron: '40 09 * * *'
 
 jobs:
   run-daily-script:
