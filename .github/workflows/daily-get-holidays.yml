@@ -1,4 +1,4 @@
-name: Annually Get Holidays for Next Year
+name: Daily Get Holidays for Next Year
 
 on:
   schedule:
