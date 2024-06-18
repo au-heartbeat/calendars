@@ -3,9 +3,10 @@ name: Daily Get Holidays
 on:
   schedule:
     - cron: '48 09 * * *'
+  workflow_dispatch:
 
 jobs:
-  run-daily-script:
+  daily:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
