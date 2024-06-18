@@ -21,7 +21,7 @@ jobs:
         cd ..
         ./ops/get_next_year_holidays.sh
 
-     - name: Commit and Push Changes
+    - name: Commit and Push Changes
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
