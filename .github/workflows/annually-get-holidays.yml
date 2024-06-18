@@ -1,12 +1,12 @@
-name: Daily Get Holidays
+name: Annually Get Holidays for Next Year
 
 on:
   schedule:
-    - cron: '48 09 * * *'
+    - cron: '0 0 20 12 *'
   workflow_dispatch:
 
 jobs:
-  daily:
+  run-next-year-script:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
