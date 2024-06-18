@@ -29,5 +29,5 @@ jobs:
         git config user.name "Tang Man"
         git config user.email "hitangman@qq.com"
         git add .
-        git commit -m "Automatic update from GitHub Actions"
+        git commit -m "Automatically get holidays of next year and update from GitHub Actions"
         git push origin HEAD:main
