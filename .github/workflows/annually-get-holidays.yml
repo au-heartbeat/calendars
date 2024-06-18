@@ -1,0 +1,32 @@
+name: Annually Get Holidays for Next Year
+
+on:
+  schedule:
+    - cron: '0 0 20 12 *'
+
+jobs:
+  run-next-year-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Next Year Script
+      env:
+        API_KEY: ${{ secrets.API_KEY }}
+      run: |
+        cd ops
+        chmod +x get_holidays.sh
+        chmod +x get_next_year_holidays.sh
+        cd ..
+        ./ops/get_next_year_holidays.sh
+
+     - name: Commit and Push Changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "Tang Man"
+        git config user.email "hitangman@qq.com"
+        git add .
+        git commit -m "Automatic update from GitHub Actions"
+        git push origin HEAD:main
