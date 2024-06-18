@@ -1,11 +1,11 @@
-name: Daily Get Holidays
+name: Annually Get Holidays for Next Year
 
 on:
   schedule:
-    - cron: '30 17 * * *'
+    - cron: '0 0 20 12 *'
 
 jobs:
-  run-daily-script:
+  run-next-year-script:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
